@@ -5,11 +5,17 @@ body
     background: #CBDEE6;
     width: 100%;
     min-height: 100vh;
-    font-family: "Droid Sans";
+    font-family: "CustomRoboto", "Inter","Open Sans";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: nowrap;
+}
+@font-face {
+    font-family: 'CustomRoboto';
+    src: url('../Assets/Roboto-VariableFont_wdth,wght.ttf') format('truetype');,
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -69,8 +75,8 @@ div#mid
     margin-bottom: 5px;
     margin-top: 0;
     padding: 7px;
-    height: 35px;
-    width: 500px;
+    height: 10%;
+    width: 100%;
 }
 .choice
 {
@@ -107,6 +113,7 @@ p
     border: none;
     border-radius: 20px;
     margin: 0;
+    width: 40%;
     transition: ease-in-out 0.2s;
 }
 .butt:hover
@@ -125,6 +132,7 @@ p
     font-size: 14px;
     border-radius: 20px;
     margin-bottom: 20px;
+    width: 40%;
     transition: ease-in-out 0.2s;
 }
 .butt2:hover
@@ -165,7 +173,6 @@ p.line
     background: #1B4079;
     border-radius: 20px 20px 0 0;
     height: 100%;
-    width: 100%;
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
@@ -199,14 +206,14 @@ p.line
 .col p
 {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 6px;
     margin-bottom: 6px;
     margin-right: 20px;
 }
 .col h1
 {
-    font-size: 17px;
+    font-size: 20px;
     color: #ADCCE1;
     margin-bottom:10px;
     margin-top: 40px;
@@ -225,7 +232,7 @@ p.line
 .col2 p
 {
     color: white;
-    font-size: clamp(15px, 2.5vw, 18px);
+    font-size: 16px;
     margin-top: 6px;
     margin-bottom: 6px;
     margin-right: 20px;
@@ -252,7 +259,7 @@ p.line
     color: black;
     margin-left: 2px;
     margin-right: 5px;
-    font-size: clamp(13px, 2vw, 15px);
+    font-size: 15px;
 }
 
 #phonenum p#day
@@ -260,7 +267,7 @@ p.line
     color: black;
     margin-left: 5px;
     margin-right: 2px;
-    font-size: clamp(10px, 1.5vw, 12px);
+    font-size: 12px
 }
 #small p
 {
@@ -279,8 +286,8 @@ p.line
     max-height: calc(100vh - 495px);
     max-width: 300px;
 }
-button {    
-    width: 160px;
+button {
+    width: 50%;
     height: 50px;
     margin-top: 10px;
     font-size: clamp(13px, 2vw, 15px);
