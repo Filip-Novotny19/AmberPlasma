@@ -2,51 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Portál dárce</title>
 </head>
 <body>
 
 <div id="topmenu">
-    <img src="amber-logo.svg" alt="amber logo">
-    <img src="portal-darce-logo.svg" alt="darce logo">
-    <img src="portal-darce-logo.svg" alt="darce logo" id="fake">
+    <img alt="amber logo" src="amber-logo.svg">
+    <img alt="darce logo" src="portal-darce-logo.svg">
+    <img alt="darce logo" id="fake" src="portal-darce-logo.svg">
 </div>
 </body>
 
 <div id="mid">
-    <form id="form" action="dalsi.php" method="get">
-        <p>Email*</p>
-        <input type="text" placeholder="Zadejte Váš email">
+    <div id="form" method="get">
+        <div class="choice">
+            <p>Email </p>
+            <p class="space">a</p>
+            <p class="star"> * </p>
+        </div>
+        <input placeholder="Zadejte Váš email" type="text">
         <br>
-
-        <p>Heslo*</p>
-        <input type="text" placeholder="Zadejte heslo">
+        <div class="choice">
+            <p>Heslo </p>
+            <p class="space">a</p>
+            <p class="star"> * </p>
+        </div>
+        <input placeholder="Zadejte heslo" type="text">
         <br>
         <a href="zaphesl.php"><i class="fa fa-lock"></i> Zapomenuté heslo</a>
         <br>
         <div id="options">
-            <input type="submit" value="Přihlásit se" class="butt" style=" width: 120px; height: 40px; margin: 0;">
+            <button href="login.php" class="butt" style=" width: 160px; height: 40px; margin: 0;">
+                <a href="login.php" class="buttlink">Přihlásit se</a>
+            </button>
             <div id="or">
                 <p class="line"></p>
                 <p>nebo</p>
                 <p class="line"></p>
             </div>
 
-            <input type="submit" value="Vytvořit nový účet Moje Amber" class="butt2"
-                   style=" width: 200px; height: 40px;">
+            <button class="butt2"  style=" width: 200px; height: 50px;">
+                <a href="signin.php" class="buttlink"> Vytvořit nový účet Moje Amber</a>
+            </button>
             <div id="lasttext">
                 <p>Jste náš stávající dárce a nemůžete se přihlásit?</p>
                 <p><a href="help"> Klikněte zde </a> a nastavte si heslo.</p>
             </div>
         </div>
 
-    </form>
+    </div>
 </div>
 <div id="bottom">
     <div class="col">
@@ -96,10 +106,11 @@
         </div>
         <div id="small">
             <p>Pro objednání či přeobjednání termínu, prosím volejte naší zelenou linku.
-                Rezervovat termín si můžete i online na našem <a href="rezervacniport">rezervačním portálu</a></p>
+                Rezervovat termín si můžete i online na našem <a class="clickhere" href="reservep.php">rezervačním
+                    portálu</a></p>
 
         </div>
-        <button>Objednat se</button>
+        <button><a href="reserve.php" class="Obj">Objednat se</a></button>
     </div>
 
 </div>
