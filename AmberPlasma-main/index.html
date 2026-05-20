@@ -21,15 +21,14 @@
 </body>
 
 <div id="mid">
-    <form id="form" action="login.php" method="POST">
+    <form id="form" action="dalsi.php" method="POST">
         <div class="choice">
             <p>Email </p>
             <span class="star"> *</span>
 
         </div>
 
-        <input placeholder="Zadejte Váš email" type="text">
-
+        <input class="mail" placeholder="Zadejte Váš email" type="text">
         <br>
         <div class="choice">
             <p>Heslo </p>
@@ -43,7 +42,15 @@
         <a href="zaphesl.php"><i class="fa fa-lock"></i> Zapomenuté heslo</a>
         <br>
         <div id="options">
-            <button type="submit" class="butt">Přihlásit se</button>
+            <button type="button" class="butt">Přihlásit se</button>
+            <dialog id="Modal">
+                <div class="mod">
+                <h1>Email:  </h1> <p id="mail">Mail</p>
+                </div>
+                <div class="mod">
+                <h1>Heslo:</h1> <p id="pass">SHeslo</p>
+                </div>
+            </dialog>
             <div id="or">
                 <p class="line"></p>
                 <p>nebo</p>
@@ -134,6 +141,50 @@
         });
 
     </script>
+
+    <script>
+        const form = document.querySelector('.butt');
+        const emailinput= document.querySelector('.mail');
+        const passinput = document.querySelector('.pswd input');
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        form.addEventListener('click', (event) => {
+            const userEmail = emailinput.value.trim();
+            const pass=passinput.value.trim();
+
+
+            if (pass && validateEmail(userEmail))
+            {
+                const modal=document.getElementById("Modal");
+                document.getElementById("mail").textContent=userEmail;
+                document.getElementById("pass").textContent=pass;
+                modal.showModal()
+
+                modal.addEventListener('click', (e) => {
+                    const dialogDimensions = modal.getBoundingClientRect();
+                    if (
+                        e.clientX < dialogDimensions.left ||
+                        e.clientX > dialogDimensions.right ||
+                        e.clientY < dialogDimensions.top ||
+                        e.clientY > dialogDimensions.bottom
+                    ) {
+                        modal.close();
+                    }
+                });
+            }else
+            {
+                event.preventDefault();
+                alert("Prosím, zadejte platnou emailovou adresu nebo heslo.");
+            }
+        });
+
+    </script>
+
+
 
 </div>
 </body>
