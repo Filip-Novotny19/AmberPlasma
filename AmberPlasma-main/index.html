@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css-styles/reset.css" rel="stylesheet">
+    <link href="css-styles/style.css" rel="stylesheet">
+    <title>Portál dárce</title>
+</head>
+<body>
+
+<div id="topmenu">
+    <img alt="amber logo" src="/images/amber-logo.svg">
+    <img alt="darce logo" src="/images/portal-darce-logo.svg">
+    <img alt="darce logo" id="fake" src="/images/portal-darce-logo.svg">
+</div>
+</body>
+
+<div id="mid">
+    <form id="form" action="login.php" method="POST">
+        <div class="choice">
+            <p>Email </p>
+            <span class="star"> *</span>
+
+        </div>
+
+        <input placeholder="Zadejte Váš email" type="text">
+
+        <br>
+        <div class="choice">
+            <p>Heslo </p>
+            <span class="star"> *</span>
+        </div>
+        <div class="pswd">
+        <input placeholder="Zadejte heslo" value="" type="password" >
+            <button type="button" class="pswdtoggle"><i class="fa fa-eye-slash"></i> </button>
+        </div>
+        <br>
+        <a href="zaphesl.php"><i class="fa fa-lock"></i> Zapomenuté heslo</a>
+        <br>
+        <div id="options">
+            <button type="submit" class="butt">Přihlásit se</button>
+            <div id="or">
+                <p class="line"></p>
+                <p>nebo</p>
+                <p class="line"></p>
+            </div>
+
+            <button type="button" class="butt2" onclick="window.location.href='signin.php'">
+                Vytvořit nový účet Moje Amber
+            </button>
+            <div id="lasttext">
+                <p>Jste náš stávající dárce a nemůžete se přihlásit?</p>
+                <p><a href="help"> Klikněte zde </a> a nastavte si heslo.</p>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+<div id="bottom">
+    <div class="col">
+        <h1>Amber Plasma</h1>
+        <p>Proč darovat plazmu</p>
+        <p>Staňte se dárcem</p>
+        <p>Odměny</p>
+        <p>Novinky</p>
+        <p>Slovník pojmů</p>
+        <p>FAQ</p>
+    </div>
+
+    <div class="col">
+        <h1>O nás</h1>
+        <p>O společnosti</p>
+        <p>Kariéra</p>
+        <p>Napsali o nás</p>
+        <p>Partneři</p>
+        <p>Kontakty</p>
+        <p>Whistleblowing</p>
+        <p>GDPR</p>
+    </div>
+
+    <div class="col">
+
+        <h1>Dárcovská centra</h1>
+        <p>Česká Lípa</p>
+        <p>Děčín</p>
+        <p>Cheb</p>
+        <p>Chomutov</p>
+        <p>Jablonec nad Nisou</p>
+        <p>Karlovy Vary</p>
+    </div>
+    <div class="col2">
+        <p>Litoměřice</p>
+        <p>Mladá Boleslav</p>
+        <p>Plzeň</p>
+        <p>Praha - Nové Butovice</p>
+        <p>Příbram</p>
+        <p>Teplice</p>
+    </div>
+    <div class="col3">
+        <h1>Bezplatná linka</h1>
+        <div id="phonenum">
+            <i class="fa fa-phone"></i>
+            <p id="main">800 606 806</p>
+            <p id="day">po-pá 7.30-16.00</p>
+        </div>
+        <div id="small">
+            <p>Pro objednání či přeobjednání termínu, prosím volejte naší zelenou linku.
+                Rezervovat termín si můžete i online na našem <a class="clickhere" href="reservep.php">rezervačním
+                    portálu</a></p>
+
+        </div>
+        <button id="objb"><a class="Obj" href="reserve.php">Objednat se</a></button>
+    </div>
+
+    <script>
+        const pswdToggle = document.querySelector('.pswdtoggle');
+        const pswdInput = document.querySelector('.pswd input');
+        const toggleIcon = document.querySelector('.pswdtoggle i');
+
+        pswdToggle.addEventListener('click', () => {
+            if (pswdInput.type == "text") {
+                pswdInput.type = "password";
+                toggleIcon.className = "fa fa-eye-slash";
+            }
+            else {
+                pswdInput.type = "text";
+                toggleIcon.className = "fa fa-eye";
+            }
+        });
+
+    </script>
+
+</div>
+</body>
+</html>
