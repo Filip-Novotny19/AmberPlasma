@@ -36,6 +36,7 @@ body {
         margin-bottom: 100px;
     }
 
+
 }
 
 @media screen and (orientation: portrait) {
@@ -61,6 +62,10 @@ body {
     {
         margin-left: 30px;
     }
+    .colum
+    {
+        flex-direction: column;
+    }
 
 }
 
@@ -75,6 +80,11 @@ body {
    {
        width: 100%;
        padding: 10px;
+   }
+   .colum
+   {
+       flex-direction: column;
+       align-items: flex-start;
    }
 
 }
@@ -403,8 +413,9 @@ p.line {
     justify-content: flex-start;
     flex-direction: column;
     margin-right: 10px;
-    margin-top: 60px;
     margin-bottom: 10px;
+    margin-left: 0;
+    width: auto;
 }
 
 .col2 p {
@@ -413,6 +424,12 @@ p.line {
     margin-top: 6px;
     margin-bottom: 6px;
     margin-right: 20px;
+    width: 100%;
+}
+.colum
+{
+    display: flex;
+    gap:50%;
 }
 
 .col3 {
