@@ -1,0 +1,503 @@
+:root {
+    --primary: #CBDEE6;
+    --bottom: #1B4079;
+    --mainp: #194564;
+    --redbutt: #B90E49;
+    --redbutt-hover: #db2f6a;
+    --bluebutt: #004B6C;
+    --bluebutt-hover: #157197;
+    --mainh: #ADCCE1;
+    --phone-or: #FCA91C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght=0,300..800;1,300..800&family=Roboto:ital,wght=0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    font-family: "Open Sans", "Roboto";
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+@media screen and (orientation: landscape) {
+    #bottom {
+        gap: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    button {
+        margin-bottom: 6rem;
+    }
+    #modal
+    {
+        min-width: 25%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    #bottom {
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    button {
+        margin-bottom: 6rem;
+    }
+
+    .col {
+        margin-left: 2.5rem;
+    }
+
+    .col2 {
+        margin-left: 2.5rem;
+    }
+
+    .col3 {
+        margin-left: 2.5rem;
+    }
+
+    .colum {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #form {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    #options {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    .colum {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+div#topmenu {
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    background: white;
+}
+
+#topmenu img {
+    height: 3.5rem;
+    width: 6rem;
+    margin: 0;
+    padding: 0;
+}
+
+#topmenu img#fake {
+    visibility: hidden;
+}
+
+div#mid {
+    left: 0;
+    height: calc(100% + 0.63rem);
+    display: flex;
+    padding-bottom: 0.63rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.buttlink {
+    text-decoration: none;
+    color: white;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+#form input {
+    margin-top: 0;
+    padding: 0.5rem;
+    height: 3rem;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choice {
+    display: flex;
+    flex-direction: row;
+}
+
+.choice p {
+    margin-bottom: 0.5rem;
+}
+
+.choice .star {
+    color: red;
+}
+
+a {
+    font-size: 0.75rem;
+    color: var(--mainp);
+}
+
+a.clickhere {
+    color: white;
+}
+
+.pswd {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pswd input {
+    box-sizing: border-box;
+    padding-right: 3rem;
+    width: 100%;
+    height: 3rem;
+}
+
+.pswdtoggle {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 0.94rem;
+    font-weight: bold;
+    padding: 0;
+}
+
+.pswdtoggle i {
+    font-size: 1.25rem;
+}
+
+p {
+    color: var(--mainp);
+}
+
+#mail-error {
+    visibility: hidden;
+    color: red;
+    margin: 0.63rem 0;
+    font-size: 0.75rem;
+}
+
+#pass-error {
+    visibility: hidden;
+    color: red;
+    margin: 0.63rem 0;
+    font-size: 0.75rem;
+}
+
+.butt {
+    background: var(--redbutt);
+    border: none;
+    border-radius: 1.25rem;
+    margin: 0.63rem;
+    width: 40%;
+    height: 2.81rem;
+    transition: ease-in-out 0.2s;
+    color: white;
+}
+
+.butt:hover {
+    background: var(--redbutt-hover);
+    border: none;
+    border-radius: 1.25rem;
+    color: white;
+}
+
+.mod {
+    display: flex;
+    flex-direction: row;
+}
+
+#modalOverlay {
+    background: linear-gradient(rgba(0,0,0,0.7));
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    padding:0;
+    justify-content: center;
+}
+
+
+#modal {
+    border: solid black 0.13rem;
+    position: fixed;
+    background-color: var(--primary);
+    height: 25%;
+    margin-top: 7%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    padding: 0;
+    padding-bottom: 0.31rem;
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: flex;
+}
+
+#modal p {
+    color: black;
+    margin: 0 0.63rem;
+}
+
+#modal h1 {
+    margin-left: 0.63rem;
+}
+
+#header {
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.63rem;
+}
+
+#exit {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.44rem;
+}
+
+.exitbutt {
+    margin: 0;
+    border: solid black 0.06rem;
+    background-color: white;
+}
+
+.exitbutt:hover {
+    margin: 0;
+    border: solid black 0.06rem;
+    cursor: pointer;
+}
+
+.butt2 {
+    background: var(--bluebutt);
+    border: none;
+    border-radius: 1.25rem;
+    margin-top: 0.63rem;
+    margin-bottom: 1.25rem;
+    width: 40%;
+    transition: ease-in-out 0.2s;
+    padding: 0.5rem;
+    color: white;
+}
+
+.butt2:hover {
+    background: var(--bluebutt-hover);
+    border: none;
+    border-radius: 1.25rem;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.line {
+    width: 9.38rem;
+    border: none;
+    border-bottom: solid black;
+    border-width: 0.06rem;
+    margin-bottom: 0.31rem;
+}
+
+#or {
+    width: 25.88rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.31rem;
+}
+
+#bottom {
+    background: var(--bottom);
+    border-radius: 1.25rem 1.25rem 0 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#lasttext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#lasttext p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.col {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 0.63rem;
+    margin-bottom: 1%;
+}
+
+.col p {
+    color: white;
+    margin-top: 0.38rem;
+    margin-bottom: 0.38rem;
+    margin-right: 1.25rem;
+}
+
+.col h1 {
+    font-size: 1.5rem;
+    color: #ADCCE1;
+    margin-bottom: 0.63rem;
+    margin-top: 2.5rem;
+}
+
+.col2 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 0.63rem;
+    margin-bottom: 0.63rem;
+    margin-left: 0;
+    width: auto;
+}
+
+.col2 p {
+    color: white;
+    margin-top: 0.38rem;
+    margin-bottom: 0.38rem;
+    margin-right: 1.25rem;
+    width: 100%;
+}
+
+.colum {
+    display: flex;
+    gap: 50%;
+}
+
+.col3 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 0.63rem;
+    margin-right: 0.63rem;
+    margin-bottom: 1%;
+    max-width: 18.75rem;
+}
+
+.col3 p {
+    color: white;
+    margin-top: 0.38rem;
+    margin-bottom: 0.38rem;
+    margin-right: 1.25rem;
+}
+
+.col3 h1 {
+    font-size: 1.5rem;
+    color: var(--mainh);
+    margin-bottom: 0.63rem;
+    margin-top: 2.5rem;
+}
+
+#phonenum {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    align-items: center;
+    padding: 0.63rem;
+    border-radius: 0.94rem;
+    margin-top: 0.63rem;
+}
+
+#phonenum i {
+    color: var(--phone-or);
+    margin-left: 0.13rem;
+    margin-right: 0.13rem;
+}
+
+#phonenum p#main {
+    color: black;
+    margin-left: 0.13rem;
+    margin-right: 0.31rem;
+}
+
+#phonenum p#day {
+    color: black;
+    margin-left: 0.31rem;
+    margin-right: 0.13rem;
+    font-size: 0.81rem;
+}
+
+#small p {
+    margin-top: 0.63rem;
+    font-size: 0.81rem;
+    color: var(--mainh);
+}
+
+button#objb {
+    width: 8.13rem;
+    min-height: 3.13rem;
+    margin-top: 0.63rem;
+    font-size: clamp(0.81rem, 2vw, 0.94rem);
+    background: linear-gradient(299deg, #B90E49 3%, #F1680B 18%, #F9AB00 33%, #F9AB00 67%, #F1680B 82%, #B90E49 97%);
+    border-radius: 1.25rem;
+    border: none;
+    color: white;
+}
+
+button#objb:hover {
+    width: 8.13rem;
+    min-height: 3.13rem;
+    margin-top: 0.63rem;
+    background: linear-gradient(209deg, #B90E49 3%, #F1680B 18%, #F9AB00 33%, #F9AB00 67%, #F1680B 82%, #B90E49 97%);
+    border-radius: 1.25rem;
+    border: none;
+    color: white;
+}
+
+a.Obj {
+    text-decoration: none;
+    color: white;
+}
